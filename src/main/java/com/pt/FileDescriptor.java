@@ -3,6 +3,13 @@ package com.pt;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to hold the names of the three files (.FMT, .DAT and .csv files) and a
+ * list of column definition classes (ColDef).
+ * 
+ * @author PT
+ *
+ */
 public class FileDescriptor {
 
 	public String fmtFile = "";

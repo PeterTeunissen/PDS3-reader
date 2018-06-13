@@ -5,6 +5,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Utility class to read through a .LBL file and find the name of the .DAT and
+ * .FMT files.
+ * 
+ * Then open the .FMT file and find the RJW annotated rows. These are easier to
+ * parse and hold more info than the other stuff.
+ * 
+ * For each RJW row, it creates a ColDef object and loads it with parts of the
+ * RJW row. At the end appends the ColDef object to the list of ColDefs in the
+ * FileDescriptor.
+ * 
+ * @author PT
+ *
+ */
 public class ColDefReader {
 
 	public FileDescriptor readDefinition(String defFile) {

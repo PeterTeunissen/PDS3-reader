@@ -5,6 +5,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 
+/**
+ * Main entry program. Takes the command line arguments, calls the ColDefReader
+ * to get the layout of the .DAT file (by reading the .LBL and .FMT files). Then
+ * reads the actual .DAT file with that definition and writes it out to a .csv
+ * file.
+ * 
+ * @author PT
+ *
+ */
 public class DatReader {
 
 	public static void main(String[] args) {

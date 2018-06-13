@@ -4,6 +4,17 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to loop through the .DAT file and read it according to the columns
+ * defined in the FileDescriptor object.
+ * 
+ * For each row of data in the .DAT file, it adds an entry to the fileData
+ * array. Each entry in the fileData array, contains an array of ColData
+ * objects.
+ * 
+ * @author PT
+ *
+ */
 public class FileReader {
 
 	public List<RowData> readFile(String fin, FileDescriptor fd) {
