@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/antlr-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/antlr-runtime-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/clibwrapper_jiio-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-beanutils-core-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-chain-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/commons-validator-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/cupv10k-runtime-2.11.0-xml-schema-1.1-beta.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/dom4j-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/generate-0.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jai_imageio-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jai-codec-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jai-core-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/java-diff-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jaxb-api-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jaxb-impl-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jt-iterators-1.1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jts-1.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jt-stats-1.1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jt-utilities-1.1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/jt-utils-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/nom-tam-fits-1.13.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/pds4-tools-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/pds-utils-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/product-tools-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/saxon-9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/slf4j-jdk14-1.7.21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/sslext-1.2-0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/stax-api-1.0-2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/stringtemplate-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/struts-core-1.3.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/struts-taglib-1.3.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/struts-tiles-1.3.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/transform-1.7.0.jar" sourcepath="C:/Users/pt038469/Downloads/transform-1.7.0-bin/src"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/velocity-tools-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/vicario-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pt038469/Downloads/transform-1.7.0-bin/transform-1.7.0/lib/xercesImpl-2.11.0-xml-schema-1.1-beta.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
