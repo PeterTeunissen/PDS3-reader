@@ -52,6 +52,7 @@ public class ColDef {
 				ColData coldat = new ColData();
 				coldat.colName = col;
 
+				// unsigned
 				if (dataType.equals("H")) {
 					byte[] n = new byte[4];
 					n[0] = bs[0];
@@ -61,6 +62,7 @@ public class ColDef {
 					coldat.colValue = String.valueOf(v);
 				}
 
+				// signed
 				if (dataType.equals("h")) {
 					byte[] n = new byte[4];
 					n[0] = bs[0];
@@ -69,32 +71,38 @@ public class ColDef {
 					coldat.colValue = String.valueOf(v);
 				}
 
+				// unsigned
 				if (dataType.equals("I")) {
 					long v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).getInt();
 					v &= 4294967295L;
 					coldat.colValue = String.valueOf(v);
 				}
 
+				// signed
 				if (dataType.equals("i")) {
 					long v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).getInt();
 					coldat.colValue = String.valueOf(v);
 				}
 
+				// unsigned
 				if (dataType.equals("B")) {
 					byte v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).get();
 					coldat.colValue = String.valueOf(v & 0xFF);
 				}
 
+				// signed
 				if (dataType.equals("b")) {
 					byte v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).get();
 					coldat.colValue = String.valueOf(v & 0xFF);
 				}
 
+				// float
 				if (dataType.equals("f")) {
 					double v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).getFloat();
 					coldat.colValue = String.valueOf(v);
 				}
 
+				// char
 				if (dataType.equals("c")) {
 					coldat.colValue = new String(bs);
 				}
