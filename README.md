@@ -1,9 +1,9 @@
 # PDS3-reader
-Java project to read PDS3 data files.
+Java project to read and dump PDS3 data files (see https://pds.nasa.gov/)
 
 You need to download the .DAT, .LBL and .FMT files from a NASA dataset.
 
-Then build this project with maven.
+Build this project with maven.
 
 Run the program:
 
@@ -12,3 +12,5 @@ Run the program:
 ```
 
 (showHeaders can be true/false)
+
+The program will output to the screen, but will also create a .csv file in the same folder as the .LBL file. If the .csv exists, it will be OVERWRITTEN!!!
