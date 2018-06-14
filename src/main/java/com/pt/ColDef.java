@@ -114,7 +114,7 @@ public class ColDef {
 				// unsigned
 				if (dataType.equals("I")) {
 					long v = ByteBuffer.wrap(bs).order(ByteOrder.LITTLE_ENDIAN).getInt();
-					v &= (long) 0xFFFFFFFF;
+					v &= 0xFFFFFFFFL;
 					coldat.colValue = String.valueOf(v);
 				}
 

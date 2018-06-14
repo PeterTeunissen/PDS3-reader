@@ -38,8 +38,6 @@ public class ColDefReader {
 		try {
 			File file = new File(defFile);
 
-			dirName = file.getAbsolutePath();
-			dirName = file.getCanonicalPath();
 			dirName = file.getParent();
 
 			fileReader = new FileReader(file);
@@ -72,7 +70,6 @@ public class ColDefReader {
 		fd.csvFile = dirName + File.separator + datFile.substring(0, datFile.length() - 4) + ".csv";
 
 		try {
-			fileReader = null;
 			File file = new File(fd.fmtFile);
 			fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -81,7 +78,7 @@ public class ColDefReader {
 
 				if (line.startsWith("/* RJW,")) {
 					line = line.replaceAll("/[*]", "").replaceAll("[*]/", "").trim();
-					String[] pieces = line.trim().split(",");
+					String[] pieces = line.split(",");
 					// RJW, ACCUMULATION_TIME, H, 1, 1 */
 					if (pieces[1].trim().equals("BYTES_PER_RECORD")) {
 						continue;
@@ -89,14 +86,19 @@ public class ColDefReader {
 					if (pieces[1].trim().equals("OBJECTS_PER_RECORD")) {
 						continue;
 					}
+
+					for (int i = 0; i < pieces.length; i++) {
+						pieces[i] = pieces[i].trim();
+					}
+
 					ColDef cd = new ColDef();
-					cd.colName = pieces[1].trim();
-					cd.dataType = pieces[2].trim();
-					cd.dataSize = getSize(pieces[2].trim());
-					cd.dimensions = Integer.valueOf(pieces[3].trim());
+					cd.colName = pieces[1];
+					cd.dataType = pieces[2];
+					cd.dataSize = getSize(pieces[2]);
+					cd.dimensions = Integer.valueOf(pieces[3]);
 					cd.dimensionSize = new int[cd.dimensions];
 					for (int i = 1; i <= cd.dimensions; i++) {
-						cd.dimensionSize[i - 1] = Integer.valueOf(pieces[4 + i - 1].trim());
+						cd.dimensionSize[i - 1] = Integer.valueOf(pieces[4 + i - 1]);
 					}
 
 					// Fake a sequence of characters to a single string
@@ -125,17 +127,23 @@ public class ColDefReader {
 		if (dt.equals("H")) {
 			return 2;
 		}
+		if (dt.equals("h")) {
+			return 2;
+		}
 		if (dt.equals("I")) {
+			return 4;
+		}
+		if (dt.equals("i")) {
 			return 4;
 		}
 		if (dt.equals("B")) {
 			return 1;
 		}
+		if (dt.equals("b")) {
+			return 1;
+		}
 		if (dt.equals("f")) {
 			return 4;
-		}
-		if (dt.equals("h")) {
-			return 2;
 		}
 		if (dt.equals("c")) {
 			return 1;
