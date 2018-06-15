@@ -21,7 +21,7 @@ public class ColDefTest {
 
 	@After
 	public void cleanup() {
-		if (dummyFile.exists()) {
+		if (dummyFile != null && dummyFile.exists()) {
 			dummyFile.delete();
 		}
 		dummyFile = null;
@@ -35,8 +35,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 4;
 		cd.dataType = "c";
 
@@ -68,8 +67,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 4;
 		cd.dataType = "I";
 
@@ -94,6 +92,79 @@ public class ColDefTest {
 	}
 
 	@Test
+	public void test_I_Type_Array_1_dimension() {
+
+		FileDescriptor fd = new FileDescriptor();
+
+		ColDef cd = new ColDef();
+		cd.colName = "Test";
+		cd.dimensions = 1;
+		cd.dimensionSize = new int[] { 2 };
+		cd.dataSize = 4;
+		cd.dataType = "I";
+
+		fd.columns.add(cd);
+
+		DummyStream ds;
+		try {
+			ds = new DummyStream(dummyFile);
+			ds.setBytes(new byte[] { 0x03, 0x34, (byte) 0xf3, (byte) 0xfa, 0x04, 0x35, (byte) 0xf4, (byte) 0xfb });
+
+			RowData rd = new RowData();
+			cd.getData(rd, ds);
+			Assert.assertEquals(2, rd.rowData.size());
+			Assert.assertEquals("Test[0]", rd.rowData.get(0).colName);
+			Assert.assertEquals("4210242563", rd.rowData.get(0).colValue);
+			Assert.assertEquals("Test[1]", rd.rowData.get(1).colName);
+			Assert.assertEquals("4227085572", rd.rowData.get(1).colValue);
+
+		} catch (FileNotFoundException e) {
+			// Should never get here
+			Assert.assertEquals(true, false);
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void test_I_Type_Array_2_dimension() {
+
+		FileDescriptor fd = new FileDescriptor();
+
+		ColDef cd = new ColDef();
+		cd.colName = "Test";
+		cd.dimensions = 1;
+		cd.dimensionSize = new int[] { 2, 2 };
+		cd.dataSize = 4;
+		cd.dataType = "I";
+
+		fd.columns.add(cd);
+
+		DummyStream ds;
+		try {
+			ds = new DummyStream(dummyFile);
+			ds.setBytes(new byte[] { 0x03, 0x34, (byte) 0xf3, (byte) 0xfa, 0x04, 0x35, (byte) 0xf4, (byte) 0xfb, 0x04,
+					0x35, (byte) 0xf4, (byte) 0xfb, 0x03, 0x34, (byte) 0xf3, (byte) 0xfa, });
+
+			RowData rd = new RowData();
+			cd.getData(rd, ds);
+			Assert.assertEquals(4, rd.rowData.size());
+			Assert.assertEquals("Test[0][0]", rd.rowData.get(0).colName);
+			Assert.assertEquals("4210242563", rd.rowData.get(0).colValue);
+			Assert.assertEquals("Test[1][0]", rd.rowData.get(1).colName);
+			Assert.assertEquals("4227085572", rd.rowData.get(1).colValue);
+			Assert.assertEquals("Test[0][1]", rd.rowData.get(2).colName);
+			Assert.assertEquals("4227085572", rd.rowData.get(2).colValue);
+			Assert.assertEquals("Test[1][1]", rd.rowData.get(3).colName);
+			Assert.assertEquals("4210242563", rd.rowData.get(3).colValue);
+
+		} catch (FileNotFoundException e) {
+			// Should never get here
+			Assert.assertEquals(true, false);
+			e.printStackTrace();
+		}
+	}
+
+	@Test
 	public void test_i_Type() {
 
 		FileDescriptor fd = new FileDescriptor();
@@ -101,8 +172,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 4;
 		cd.dataType = "i";
 
@@ -134,8 +204,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 4;
 		cd.dataType = "f";
 
@@ -167,8 +236,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 1;
 		cd.dataType = "b";
 
@@ -200,8 +268,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 1;
 		cd.dataType = "B";
 
@@ -233,8 +300,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 2;
 		cd.dataType = "h";
 
@@ -266,8 +332,7 @@ public class ColDefTest {
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
 		cd.dimensions = 1;
-		cd.dimensionSize = new int[1];
-		cd.dimensionSize[0] = 1;
+		cd.dimensionSize = new int[] { 1 };
 		cd.dataSize = 2;
 		cd.dataType = "H";
 
