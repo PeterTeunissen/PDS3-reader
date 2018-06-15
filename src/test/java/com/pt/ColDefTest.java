@@ -92,7 +92,7 @@ public class ColDefTest {
 	}
 
 	@Test
-	public void test_I_Type_Array_1_dimension() {
+	public void test_I_Type_Array_1_dimension_2_entries() {
 
 		FileDescriptor fd = new FileDescriptor();
 
@@ -126,13 +126,13 @@ public class ColDefTest {
 	}
 
 	@Test
-	public void test_I_Type_Array_2_dimension() {
+	public void test_I_Type_Array_2_dimensions_2_by_2() {
 
 		FileDescriptor fd = new FileDescriptor();
 
 		ColDef cd = new ColDef();
 		cd.colName = "Test";
-		cd.dimensions = 1;
+		cd.dimensions = 2;
 		cd.dimensionSize = new int[] { 2, 2 };
 		cd.dataSize = 4;
 		cd.dataType = "I";
