@@ -2,6 +2,9 @@ package com.pt;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Little test class to see how we need to read bytes from a file and massage
@@ -13,6 +16,21 @@ import java.nio.ByteOrder;
 public class BB {
 
 	public static void main(String[] args) {
+
+		String utc = "2012-074T18:30:53.683";
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy-DDD'T'HH:mm:ss.SSS");
+		Date dt2;
+		try {
+			dt2 = sd.parse(utc);
+			System.out.println(dt2);
+			SimpleDateFormat sd2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+			System.out.println(sd2.format(dt2));
+			System.out.println("Epoch:" + dt2.getTime());
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		// We read 03 34 F3 FA from the file
 		byte[] bs = new byte[] { 0x03, 0x34, (byte) 0xf3, (byte) 0xfa };

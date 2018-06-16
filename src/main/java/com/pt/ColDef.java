@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Holds the column definition for one column, and also has a method to do a
@@ -146,6 +148,12 @@ public class ColDef {
 				// char
 				if (dataType.equals("c")) {
 					coldat.colValue = new String(bs);
+				}
+
+				if (coldat.colName.equalsIgnoreCase("UTC")) {
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-DDD'T'HH:mm:ss.SSS");
+					Date d = sdf.parse(coldat.colValue);
+					coldat.colValue = String.valueOf(d.getTime());
 				}
 
 				// Append to the row
